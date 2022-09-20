@@ -1,7 +1,14 @@
 # tencent-coding-upgrade
-一款调用腾讯云 CODING进行自动化构建和部署的升级插件
+一款调用腾讯云 CODING进行自动化构建和部署的升级插件(https://coding.net/)
 
-使用方法：
+CSND博客介绍：https://blog.csdn.net/zhb2010zhb/article/details/126608759
+
+### 前置条件：
+* 登录https://coding.net/网站 没有注册的可以注册一下，免费的服务器帮你构建项目
+* 创建项目
+* 持续集成-构建计划 新建一个构建计划
+
+### 使用方法：
 * 下载项目后本地运行 mvn install,会自动上传到本地maven仓库中，也可以放到私服上面
 * 在需要使用的项目的pom.xml文件中加入
 ~~~
@@ -33,4 +40,6 @@
                 </configuration>
             </plugin>
 ~~~ 
+
+* 这样在maven - plugins 里面 就能看到 tencent-coding-upgrade插件，双击就会自动进行升级了
 
